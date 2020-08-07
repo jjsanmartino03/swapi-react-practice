@@ -104,8 +104,8 @@ class StarWars extends React.Component {
             <CustomTable collection={collection} headers={headers} />
           </Col>
         </Row>
-        <Card>
-        <Card.Footer className="text-center ">
+        <Card className="mb-3">
+        <Card.Footer className="text-center">
           The source code of this app is <a href="https://github.com/jjsanmartino03/swapi-react-practice/">here</a> at github.
       </Card.Footer>
       </Card>
