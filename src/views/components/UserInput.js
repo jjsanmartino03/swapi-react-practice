@@ -29,7 +29,7 @@ class UserInput extends React.Component {
           <Col className="pt-2 pb-3">
             <label htmlFor="api-url">
               Enter the <b>id</b> of the desired{" "}
-              {endpoint === "people" ? "person" : endpoint.replace(/s$/, "")}
+              {endpoint === "people" ? "person" : endpoint.replace(/s$/, "")} (disabled temporarily)
             </label>
 
             <InputGroup >
@@ -58,6 +58,7 @@ class UserInput extends React.Component {
               onClick={this.onFetchClick}
               variant="primary"
               block
+              disabled
             >
               Fetch{" "}
               {endpoint === "people" ? "person" : endpoint.replace(/s$/, "")}
