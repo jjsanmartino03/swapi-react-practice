@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+import MyRouter from "./Router";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./colors.css";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <MyRouter />
   </React.StrictMode>,
   document.getElementById('root')
 );
