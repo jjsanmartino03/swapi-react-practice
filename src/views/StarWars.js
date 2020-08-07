@@ -10,8 +10,7 @@ import possibleStates from "../entities/objectOfEntities";
 class StarWars extends React.Component {
   constructor(props) {
     super(props);
-    this.state =
-      possibleStates[this.props.location.pathname.replace(/^\//, "")].object;
+    this.state = this.props.state;
   }
   /*componentDidMount = async () =>{
 		// this.fetchAllElements() Now the user does this with a button
@@ -68,7 +67,7 @@ class StarWars extends React.Component {
         instanced = this.instanceElement(element);
         this.addElementToCollection(instanced);
       }
-      next = data.next;
+      next = data.next ? data.next.replace(/^(http)(.+)/, "$1s$2") : "";
     } while (next);
   };
   addElementToCollection = (newElement) => {
@@ -79,11 +78,11 @@ class StarWars extends React.Component {
   render() {
     let collection = this.state.collection;
     let headers = this.state.tableHeaders;
-    let location = this.props.history.location.pathname.replace(/^\//, "");
+    let location = this.state.fetchInfo.endpoint;
     return (
       <Container fluid="sm">
         <h1 className="text-center my-3">
-          Get <strong>{this.state.fetchInfo.endpoint}</strong> from <br/>SWAPI
+          Get <strong>{location}</strong> from <br/>SWAPI
         </h1>
 
         <Row>
