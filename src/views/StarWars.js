@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 import UserInput from "./components/UserInput";
 import CustomTable from "./components/CustomTable";
 import axios from "axios";
@@ -104,6 +104,11 @@ class StarWars extends React.Component {
             <CustomTable collection={collection} headers={headers} />
           </Col>
         </Row>
+        <Card>
+        <Card.Footer className="text-center ">
+          The source code of this app is <a href="https://github.com/jjsanmartino03/swapi-react-practice/">here</a> at github.
+      </Card.Footer>
+      </Card>
       </Container>
     );
   }
