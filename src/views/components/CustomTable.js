@@ -10,16 +10,16 @@ class CustomTable extends React.Component {
       <Table hover responsive="md" >
         <thead className="thead-light">
           <tr >
-            {headers.map((header, index) => 
+            {headers.map((header, index) =>
               <th key={index}>{header}</th>
             )}
           </tr>
         </thead>
-         <tbody>
-					{collection.map((element, index)=>
-          <CustomTableItem key={index} element={element}/>
+        <tbody>
+          {collection.map((element, index) =>
+            <CustomTableItem key={index} element={element} />
           )}
-				</tbody>
+        </tbody>
       </Table>
     );
   }

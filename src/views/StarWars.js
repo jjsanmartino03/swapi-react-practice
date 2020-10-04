@@ -13,7 +13,7 @@ class StarWars extends React.Component {
     this.state = this.props.state;
   }
   /*componentDidMount = async () =>{
-		// this.fetchAllElements() Now the user does this with a button
+    // this.fetchAllElements() Now the user does this with a button
   }*/
   resetCollection = () => {
     this.setState({ collection: [] });
@@ -82,22 +82,22 @@ class StarWars extends React.Component {
     return (
       <Container fluid="sm">
         <h1 className="text-center my-3">
-          Get <strong>{location}</strong> from <br/>SWAPI
+          Get <strong>{location}</strong> from <br />SWAPI
         </h1>
 
         <Row>
           <Col className="mb-3" md={6}>
-          <div className="sticky-top py-md-3">
-            <MyNav
-              location={location}
-              possibleStates={Object.values(possibleStates)}
-            />
-            <UserInput
-              endpoint={this.state.fetchInfo.endpoint}
-              onFetchElement={this.fetchElementById}
-              onFetchAll={this.fetchAllElements}
-              onReset={this.resetCollection}
-            />
+            <div className="sticky-top py-md-3">
+              <MyNav
+                location={location}
+                possibleStates={Object.values(possibleStates)}
+              />
+              <UserInput
+                endpoint={this.state.fetchInfo.endpoint}
+                onFetchElement={this.fetchElementById}
+                onFetchAll={this.fetchAllElements}
+                onReset={this.resetCollection}
+              />
             </div>
           </Col>
           <Col md={6}>
@@ -105,10 +105,10 @@ class StarWars extends React.Component {
           </Col>
         </Row>
         <Card className="mb-3">
-        <Card.Footer className="text-center">
-          The source code of this app is <a href="https://github.com/jjsanmartino03/swapi-react-practice/">here</a> at github.
+          <Card.Footer className="text-center">
+            The source code of this app is <a href="https://github.com/jjsanmartino03/swapi-react-practice/">here</a> at github.
       </Card.Footer>
-      </Card>
+        </Card>
       </Container>
     );
   }
