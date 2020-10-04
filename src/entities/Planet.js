@@ -23,11 +23,11 @@ class Planet {
 }
 
 export const planetsInfo = {
-  tableHeaders: ["#","Name", "Terrain", "Day longer than earth?"],
+  tableHeaders: ["#", "Name", "Terrain", "Day longer than earth?"],
   fetchInfo: {
     endpoint: "planets",
     entity: (args) => new Planet(args),
-    extractFromObject: ["id","name", "terrain", "rotation_period"],
+    extractFromObject: ["id", "name", "terrain", "rotation_period"],
   },
   collection: [],
 };
