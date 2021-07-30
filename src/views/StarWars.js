@@ -6,7 +6,6 @@ import axios from "axios";
 import MyNav from "./components/Nav";
 import possibleStates from "../entities/objectOfEntities";
 
-
 class StarWars extends React.Component {
   constructor(props) {
     super(props);
@@ -40,10 +39,9 @@ class StarWars extends React.Component {
 
       let instanced = this.instanceElement(element);
       this.addElementToCollection(instanced);
-
     } catch (error) {
       console.error("Error while fetching api: " + error);
-      alert("Oops, there was problem with the api")
+      alert("Oops, there was problem with the api");
       return;
     }
   };
@@ -82,7 +80,8 @@ class StarWars extends React.Component {
     return (
       <Container fluid="sm">
         <h1 className="text-center my-3">
-          Get <strong>{location}</strong> from <br />SWAPI
+          Get <strong>{location}</strong> from <br />
+          SWAPI
         </h1>
 
         <Row>
@@ -106,8 +105,12 @@ class StarWars extends React.Component {
         </Row>
         <Card className="mb-3">
           <Card.Footer className="text-center">
-            The source code of this app is <a href="https://github.com/jjsanmartino03/swapi-react-practice/">here</a> at github.
-      </Card.Footer>
+            The source code of this app is{" "}
+            <a href="https://github.com/jjsanmartino03/swapi-react-practice/">
+              here
+            </a>{" "}
+            at github.
+          </Card.Footer>
         </Card>
       </Container>
     );
